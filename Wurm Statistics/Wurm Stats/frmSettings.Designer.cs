@@ -1,4 +1,4 @@
-﻿namespace Wurm_Stats
+﻿namespace EWOS
 {
     partial class FrmSettings
     {

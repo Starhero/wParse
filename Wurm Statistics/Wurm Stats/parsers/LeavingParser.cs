@@ -4,44 +4,49 @@ using WParse;
 
 namespace EWOS.parsers
 {
-    public sealed class BoardParser : IParser
+    public sealed class LeavingSettlements : IParser
     {
         public string Name
         {
             get
             {
-                return "Ship Boarding Stats";
+                return "Settlments you have left.";
             }
         }
 
-        // [01:19:55] You board on the "Ocean Warrior" as the captain.
         public void Parse(string line, EventProxy proxy)
         {
-            if (!line.Contains("You board on the"))
+            if (!line.Contains("You leave"))
             {
                 return;
             }
 
-            int start = line.IndexOf("\"") + 1;
-            int length = line.LastIndexOf("\"") - start;
+
+            if (line.Contains("You leave Freedom Isles."))
+            {
+                return;
+            }
+
+            if (line.Contains("You leave Mol-Rehan"))
+            {
+                return;
+            }
+
+            if (line.Contains("You leave Jenn-Kellon"))
+            {
+                return;
+            }
+
+            int start = line.IndexOf("e") + 4;
+            int length = line.LastIndexOf(".") - start;
 
             if (start <= 0 || length <= 0)
             {
                 return;
             }
 
-            string name = line.Substring(start, length);
-
-            start = line.LastIndexOf(' ') + 1;
-            length = line.Length - start - 1;
-
-            if (start <= 0 || length <= 0)
-            {
-                return;
-            }
-
-            string title = line.Substring(start, length);
-
+            string settlements = line.Substring(start, length);
+            
             start = line.IndexOf('[') + 1;
             length = line.IndexOf(']') - start;
 
@@ -56,10 +61,8 @@ namespace EWOS.parsers
                 return;
             }
 
-            proxy.Add(this,"Board", time);
-            proxy.Add(this,String.Format("Board {0}", name), time);
-            proxy.Add(this,String.Format("Board {0} as {1}", name, title), time);
-            proxy.Add(this,String.Format("Board as {0}", title), time);
+            proxy.Add(this, "Leaving settlements", time);
+            proxy.Add(this, String.Format("Left {0}", settlements), time);
         }
     }
 }

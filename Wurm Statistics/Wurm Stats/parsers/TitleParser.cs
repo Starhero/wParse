@@ -4,36 +4,25 @@ using WParse;
 
 namespace EWOS.parsers
 {
-    public sealed class BoardParser : IParser
+    public sealed class Titles : IParser
     {
         public string Name
         {
             get
             {
-                return "Ship Boarding Stats";
+                return "Titles you have achieved.";
             }
         }
 
-        // [01:19:55] You board on the "Ocean Warrior" as the captain.
         public void Parse(string line, EventProxy proxy)
         {
-            if (!line.Contains("You board on the"))
+            if (!line.Contains("You have just received the title"))
             {
                 return;
             }
 
-            int start = line.IndexOf("\"") + 1;
-            int length = line.LastIndexOf("\"") - start;
-
-            if (start <= 0 || length <= 0)
-            {
-                return;
-            }
-
-            string name = line.Substring(start, length);
-
-            start = line.LastIndexOf(' ') + 1;
-            length = line.Length - start - 1;
+            int start = line.IndexOf("'") + 1;
+            int length = line.LastIndexOf("'") - start;
 
             if (start <= 0 || length <= 0)
             {
@@ -56,10 +45,8 @@ namespace EWOS.parsers
                 return;
             }
 
-            proxy.Add(this,"Board", time);
-            proxy.Add(this,String.Format("Board {0}", name), time);
-            proxy.Add(this,String.Format("Board {0} as {1}", name, title), time);
-            proxy.Add(this,String.Format("Board as {0}", title), time);
+            proxy.Add(this, "Total Titles", time);
+            proxy.Add(this, String.Format("Achieved : {0}", title), time);
         }
     }
 }
