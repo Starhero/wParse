@@ -41,6 +41,9 @@ namespace EWOS
                             }
                             catch (Exception ex)
                             {
+                                MessageBox.Show(
+                                    "EXCEPTION THROWN: We didn't complie one of the scripts correctly or it has errors." +
+                                    ex.Message);
 
 
                             }

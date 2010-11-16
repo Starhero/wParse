@@ -16,6 +16,10 @@ namespace EWOS.parsers
 
         public void Parse(string line, EventProxy proxy)
         {
+            if (line.Contains("\""))
+            {
+                return;
+            }
             if (!line.Contains("You leave"))
             {
                 return;

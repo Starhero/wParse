@@ -92,7 +92,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="parsers\LeavingParser.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="parsers\TitleParser.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
