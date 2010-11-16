@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using EWOS;
 
-namespace Wurm_Stats
+namespace EWOS
 {
     static class Program
     {
