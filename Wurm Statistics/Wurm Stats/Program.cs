@@ -12,8 +12,11 @@ namespace EWOS
         [STAThread]
         static void Main()
         {
+            EWOS.SplashScreen.SplashScreen.ShowSplashScreen();
+            SplashScreen.SplashScreen.SetStatus("Starting up....");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.DoEvents();
             Application.Run(new FormMain());
         }
     }
