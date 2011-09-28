@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wurm Stats", "Wurm Stats\Wurm Stats.csproj", "{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashScreen", "..\SplashScreen\SplashScreen.csproj", "{743EDB81-D2AC-4A52-A313-50BD4229401B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WParse", "..\WParse\WParse.csproj", "{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccLocalPath0 = .
+		SccLocalPath1 = ..\\SplashScreen
+		SccLocalPath2 = ..\\WParse
+		SccLocalPath3 = Wurm\u0020Stats
+		SccNumberOfProjects = 4
+		SccProjectName1 = ../SplashScreen
+		SccProjectName2 = ../WParse
+		SccProjectName3 = Wurm\u0020Stats
+		SccProjectUniqueName1 = ..\\SplashScreen\\SplashScreen.csproj
+		SccProjectUniqueName2 = ..\\WParse\\WParse.csproj
+		SccProjectUniqueName3 = Wurm\u0020Stats\\Wurm\u0020Stats.csproj
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs07
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1DA8ACB4-812D-4DF0-8FC7-471C16619B38}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Debug|x86.ActiveCfg = Debug|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Debug|x86.Build.0 = Debug|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Release|Any CPU.ActiveCfg = Release|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Release|x86.ActiveCfg = Release|x86
+		{2E6A6F5B-3A12-4212-BAAF-4FAC3F2E1995}.Release|x86.Build.0 = Release|x86
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{743EDB81-D2AC-4A52-A313-50BD4229401B}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
