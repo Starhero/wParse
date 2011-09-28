@@ -4,6 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using WParse;
 using EWOS;
+using EWOS.SplashScreen;
 
 namespace EWOS
 {
@@ -14,9 +15,20 @@ namespace EWOS
             get;
             set;
         }
+        private string User
+        {
+            get;
+            set;
+        }
+        private string FullPath
+        {
+            get;
+            set;
+        }
 
         public FormMain()
         {
+            SplashScreen.SplashScreen.SetStatus("Setting up Main forum", true);
             InitializeComponent();
         }
 
@@ -95,6 +107,32 @@ namespace EWOS
             MessageBox.Show(
                "Welp...sorry this isnt implemented...So..playing with this is just gonna annoy you with this message box. Yeah I know, sucks right...",
                "GOD DAM IT YOU SUCK!", MessageBoxButtons.OK);
+
+        }
+
+        private void cbAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+           
+
+            
+
+            
+
+            
+            this.treeView1.Nodes.Clear();
+            //this.FullPath =
+            //this.User = this.cbAccounts.SelectedItem.ToString();
+            this.FullPath = null;
+            
+
+            sb.Append(this.Path);
+            sb.Append(@"\players\");
+            sb.Append(this.User);
+            this.FullPath = sb.ToString();
+
+            LoadAndParse();
 
         }
     }

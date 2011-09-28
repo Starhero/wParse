@@ -1,4 +1,5 @@
-﻿namespace EWOS
+﻿using EWOS.SplashScreen;
+namespace EWOS
 {
     partial class FormMain
     {
@@ -28,10 +29,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            
+            this.components = new System.ComponentModel.Container();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.expandAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSave = new System.Windows.Forms.Button();
@@ -40,6 +41,8 @@
             this.dateTPEnd = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbAccounts = new System.Windows.Forms.ComboBox();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +66,7 @@
             this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(244, 510);
+            this.treeView1.Size = new System.Drawing.Size(244, 486);
             this.treeView1.TabIndex = 2;
             // 
             // contextMenuStrip1
@@ -148,11 +151,34 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "End Date:";
             // 
+            // cbAccounts
+            // 
+            this.cbAccounts.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbAccounts.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbAccounts.FormattingEnabled = true;
+            this.cbAccounts.Location = new System.Drawing.Point(299, 135);
+            this.cbAccounts.MaxDropDownItems = 50;
+            this.cbAccounts.Name = "cbAccounts";
+            this.cbAccounts.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbAccounts.Size = new System.Drawing.Size(156, 21);
+            this.cbAccounts.Sorted = true;
+            this.cbAccounts.TabIndex = 9;
+            this.cbAccounts.SelectedIndexChanged += new System.EventHandler(this.cbAccounts_SelectedIndexChanged);
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(0, 486);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(244, 20);
+            this.progressBar2.TabIndex = 10;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(548, 510);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.cbAccounts);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTPEnd);
@@ -183,6 +209,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem expandAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cbAccounts;
+        private System.Windows.Forms.ProgressBar progressBar2;
     }
 }
 
