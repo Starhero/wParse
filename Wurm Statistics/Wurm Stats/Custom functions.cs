@@ -54,7 +54,8 @@ namespace EWOS
 
                                 SplashScreen.SplashScreen.SetStatus("Sorting and treeing");
                                 Dictionary<string, Queue<DateTime>> entries = parser.Proxy.GetEntries();
-                                foreach (KeyValuePair<string, List<string>> pair in parser.Proxy.GetLinks())
+                                foreach (KeyValuePair<string, List<string>> pair in 
+                                    parser.Proxy.GetLinks())
                                 {
                                     TreeNode Parent = new TreeNode(pair.Key);
 

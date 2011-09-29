@@ -79,10 +79,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SplashScreen, Version=1.0.4288.9176, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\SplashScreen.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -90,10 +86,6 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.WorkflowServices" />
     <Reference Include="System.Xml" />
-    <Reference Include="WParse, Version=1.0.4288.16025, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLs\WParse.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Custom functions.cs">
@@ -117,7 +109,6 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
     <Content Include="parsers\BoardParser.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -141,9 +132,8 @@
     </Content>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="TimeStampObserver.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="TimeStampObserver.xml" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\wtfwowdelijpg.bmp" />
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
@@ -207,6 +197,16 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Desktop\SplashScreen\SplashScreen.csproj">
+      <Project>{743edb81-d2ac-4a52-a313-50bd4229401b}</Project>
+      <Name>SplashScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\wparse\WParse\WParse.csproj">
+      <Project>{1da8acb4-812d-4df0-8fc7-471c16619b38}</Project>
+      <Name>WParse</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
