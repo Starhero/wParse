@@ -18,6 +18,8 @@ namespace EWOS
             Application.SetCompatibleTextRenderingDefault(false);
             Application.DoEvents();
             Application.Run(new FormMain());
+
+            //TODO: Make sure what ever MIGHT be open now, close before things die.
         }
     }
 }
