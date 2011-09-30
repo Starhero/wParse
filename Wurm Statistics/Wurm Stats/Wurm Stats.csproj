@@ -91,12 +91,6 @@
     <Compile Include="Custom functions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,13 +121,14 @@
     <Content Include="parsers\RepairingParser.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="parsers\CreateParser.cs">
+    <Compile Include="parsers\CreateParser.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="TimeStampObserver.xml" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Resources\wtfwowdelijpg.bmp" />
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
@@ -203,7 +198,11 @@
       <Project>{743edb81-d2ac-4a52-a313-50bd4229401b}</Project>
       <Name>SplashScreen</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\wparse\WParse\WParse.csproj">
+    <ProjectReference Include="..\..\..\Hero\Hero.csproj">
+      <Project>{bfda3276-d306-49c1-8a7a-0250265df550}</Project>
+      <Name>Hero</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\wparse\WParse-hero\WParse.csproj">
       <Project>{1da8acb4-812d-4df0-8fc7-471c16619b38}</Project>
       <Name>WParse</Name>
     </ProjectReference>

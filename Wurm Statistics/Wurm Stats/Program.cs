@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using EWOS;
+using Hero;
+
 
 namespace EWOS
 {
@@ -12,8 +15,16 @@ namespace EWOS
         [STAThread]
         static void Main()
         {
-            EWOS.SplashScreen.SplashScreen.ShowSplashScreen();
-            SplashScreen.SplashScreen.SetStatus("Starting up....");
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            
+            //So the program has been started by some noob in his shack.
+            //Que SplashScreen!
+            Hero.SplashScreen.ShowSplashScreen();
+            sw.Stop();
+            Hero.SplashScreen.SetStatus("Starting up....");
+            double ms = (sw.ElapsedTicks * 1000.0) / Stopwatch.Frequency;
+            System.Diagnostics.Trace.WriteLine(ms.ToString());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.DoEvents();
