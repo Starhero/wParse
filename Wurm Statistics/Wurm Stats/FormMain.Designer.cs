@@ -1,4 +1,4 @@
-﻿using EWOS.SplashScreen;
+﻿using Hero;
 namespace EWOS
 {
     partial class FormMain

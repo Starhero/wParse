@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using WParse;
 using EWOS;
-using EWOS.SplashScreen;
+using Hero;
 
 namespace EWOS
 {
@@ -28,7 +28,7 @@ namespace EWOS
 
         public FormMain()
         {
-            SplashScreen.SplashScreen.SetStatus("Setting up Main forum", true);
+            Hero.SplashScreen.SetStatus("Setting up Main forum", true);
             InitializeComponent();
         }
 
@@ -122,8 +122,8 @@ namespace EWOS
 
             
             this.treeView1.Nodes.Clear();
-            //this.FullPath =
-            //this.User = this.cbAccounts.SelectedItem.ToString();
+            this.FullPath =
+            this.User = this.cbAccounts.SelectedItem.ToString();
             this.FullPath = null;
             
 
